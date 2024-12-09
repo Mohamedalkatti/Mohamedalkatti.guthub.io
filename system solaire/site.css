@@ -1,0 +1,229 @@
+/* Variables CSS pour une gestion centralisée des couleurs et tailles */
+:root {
+    --primary-color: #2980b9; /* Couleur principale */
+    --secondary-color: #ecf0f1; /* Couleur de fond secondaire */
+    --highlight-color: #e74c3c; /* Couleur au survol des liens */
+    --background-color: #fff; /* Couleur de fond des sections */
+    --font-color: #333; /* Couleur du texte */
+    --font-family: 'Arial', sans-serif; /* Police générale */
+    --heading-font-size: 36px; /* Taille du titre principal */
+    --subheading-font-size: 24px; /* Taille des sous-titres */
+    --text-font-size: 16px; /* Taille du texte */
+    --small-font-size: 14px; /* Taille pour les petites sections */
+    --padding-large: 20px;
+    --padding-small: 10px;
+}
+
+/* Réinitialisation des marges et du padding pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du body */
+body {
+    background-image: url("espace.jpg");
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    padding: var(--padding-large);
+    line-height: 1.6;
+}
+
+/* En-tête de la page */
+header {
+    background-color: var(--primary-color);
+    padding: var(--padding-small) 0;
+    border-radius: 8px;
+    margin-bottom: var(--padding-large);
+    text-align: center;
+}
+
+header h1 {
+    font-size: var(--heading-font-size);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Section principale de contenu */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    gap: var(--padding-large);
+}
+
+/* Introduction et section d'images */
+.intro, .image-container {
+    text-align: center;
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: var(--text-font-size);
+    margin-bottom: var(--padding-small);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Planets List */
+.planets {
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planets h2 {
+    font-size: var(--subheading-font-size);
+    color: var(--primary-color);
+    margin-bottom: var(--padding-small);
+    text-transform: uppercase;
+}
+
+.planets ol {
+    margin-left: 20px;
+    font-size: var(--text-font-size);
+}
+
+.planets li {
+    margin-bottom: var(--padding-small);
+}
+
+/* Sections pour les informations sur les planètes */
+.inner-planets, .outer-planets {
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: var(--padding-large);
+}
+
+.inner-planets h2, .outer-planets h2 {
+    font-size: var(--subheading-font-size);
+    color: var(--primary-color);
+    margin-bottom: var(--padding-small);
+    text-transform: uppercase;
+}
+
+/* Table de données des planètes */
+.planet-table {
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: var(--padding-large);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--padding-small);
+}
+
+th, td {
+    padding: var(--padding-small);
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: var(--text-font-size);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+td {
+    background-color: var(--secondary-color);
+}
+
+/* Mise en page avec Grid pour les petites sections */
+.resources {
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: var(--padding-large);
+}
+
+.resources h2 {
+    font-size: var(--subheading-font-size);
+    color: var(--primary-color);
+    margin-bottom: var(--padding-small);
+    text-transform: uppercase;
+}
+
+.resources a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.resources a:hover {
+    color: var(--highlight-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-small);
+    text-align: center;
+    border-radius: 8px;
+    margin-top: var(--padding-large);
+}
+
+footer p {
+    font-size: var(--small-font-size);
+}
+
+/* Grid Layout Adaptatif pour la page */
+@media (min-width: 768px) {
+    /* Sur grands écrans, mettre en place une disposition en deux colonnes pour le contenu principal */
+    .container {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .intro, .image-container {
+        grid-column: span 2; /* Occupe toute la largeur */
+    }
+
+    /* Agrandir la taille des titres sur les grands écrans */
+    header h1 {
+        font-size: 48px;
+    }
+
+    .planets h2, .inner-planets h2, .outer-planets h2 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Sur très grands écrans, espacer encore plus les éléments */
+    .container {
+        grid-template-columns: 1fr 2fr 1fr; /* Trois colonnes */
+    }
+
+    .intro, .image-container {
+        grid-column: span 3; /* Occupe toute la largeur */
+    }
+}
+
+a.b{
+    display: inline-block; /* Pour que le lien soit un élément de type bloc */
+    padding: 10px 20px; /* Ajouter de l'espace autour du texte */
+    background-color: #3498db; /* Couleur de fond bleue */
+    color: white; /* Texte blanc */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 30px; /* Taille de police */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Retirer le soulignement */
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+}

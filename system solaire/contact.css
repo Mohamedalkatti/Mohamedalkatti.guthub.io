@@ -1,0 +1,191 @@
+/* Variables de couleur et police */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #ecf0f1;
+    --highlight-color: #e74c3c;
+    --font-color: #333;
+    --background-color: #fff;
+    --font-family: 'Arial', sans-serif;
+    --padding: 20px;
+}
+
+/* Réinitialisation et box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    line-height: 1.6;
+    padding: var(--padding);
+}
+
+/* En-tête de la page */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 36px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page de contact */
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Section informations de contact */
+.contact-info {
+    flex: 1;
+    background-color: var(--background-color);
+    padding: var(--padding);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.contact-info li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info li strong {
+    color: var(--primary-color);
+}
+
+/* Section formulaire de contact */
+.contact-form {
+    flex: 1.5;
+    background-color: var(--background-color);
+    padding: var(--padding);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .contact-page {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        width: 100%;
+    }
+
+    .submit-btn {
+        width: auto;
+    }
+}
+a.btn-return {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement autour du texte */
+    background-color: #3498db; /* Couleur bleue */
+    color: white; /* Texte blanc */
+    font-size: 16px; /* Taille de police */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Retirer le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Effet de transition */
+    margin-top: 20px; /* Marge supérieure pour espacement */
+}
+
+/* Effet au survol du lien */
+a.btn-return:hover {
+    background-color: #2980b9; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style général du conteneur pour le lien */
+.return-home {
+    text-align: center; /* Centrer le lien */
+    margin-top: 30px; /* Marge supérieure pour espacement */
+}
